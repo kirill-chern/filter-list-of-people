@@ -4,16 +4,22 @@ import UsersFilter from "./components/UsersFilter/UsersFilter";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [users, setUsers] = useState([]);
-  useEffect( () => {
-    fetch("https://venbest-test.herokuapp.com/")
-      .then( response => response.json() )
-      .then( response => setUsers([...response]) );
+  const [usersData, setUsers] = useState({
+    inputData: {},
+    users: [],
   });
+  useEffect(() => {
+    fetch("https://venbest-test.herokuapp.com/")
+      .then((response) => response.json())
+      .then((response) =>
+        setUsers((state) => ({ ...state, users: [...response] }))
+      );
+  }, []);
+  console.log(usersData);
   return (
     <div className="App">
-      <UsersFilter />
-      <UsersItems users = {users}/>
+      <UsersFilter setInput={setUsers} />
+      <UsersItems users={usersData.users} />
     </div>
   );
 }
