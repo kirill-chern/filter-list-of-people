@@ -41,9 +41,7 @@ export default function UsersFilter({ setInput }) {
                   inputData: {
                     ...state.inputData,
                     age:
-                      typeof e.target.value === "number"
-                        ? e.target.value
-                        : null,
+                      (Number.isNaN( +e.target.value ) || e.target.value === "") ? "" : +e.target.value
                   },
                 }))
               }

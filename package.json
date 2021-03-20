@@ -1,5 +1,5 @@
 {
-  "name": "list-of-people",
+  "name": "filter-list-of-people",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

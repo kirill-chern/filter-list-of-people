@@ -5,7 +5,15 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [usersData, setUsers] = useState({
-    inputData: {},
+    inputData: {
+      name: "",
+      lastname: "",
+      age: "",
+      sex: {
+        m: false,
+        f: false
+      }
+    },
     users: [],
   });
   useEffect(() => {
@@ -19,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <UsersFilter setInput={setUsers} />
-      <UsersItems users={usersData.users} />
+      <UsersItems usersData={usersData} />
     </div>
   );
 }
