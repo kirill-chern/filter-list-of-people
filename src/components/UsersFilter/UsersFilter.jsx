@@ -2,8 +2,8 @@ import style from "./UsersFilter.module.scss";
 
 export default function UsersFilter() {
   return (
-    <div className={style.usersFilter}>
-      <form className={style.usersFilterForm}>
+    <div className={style.UsersFilter}>
+      <form className={style.UsersFilterForm}>
         <fieldset>
           <legend>Фильтры</legend>
           <label>
