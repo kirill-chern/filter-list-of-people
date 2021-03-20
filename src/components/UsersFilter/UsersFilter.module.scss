@@ -1,0 +1,22 @@
+.usersFilter {
+    color: blanchedalmond;
+    font-size: 20px;
+}
+.usersFilterForm {
+    display: flex;
+    justify-content: space-around;
+    input {
+        margin: 0 10px;
+        &[type=text] {
+            padding: 5px 10px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgb(132, 140, 250);
+            color: rgb(255, 209, 139);
+            &:focus {
+                outline: none;
+                border-bottom: 3px solid blue;
+            }
+        }
+    }
+}
